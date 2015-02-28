@@ -19,6 +19,9 @@ db = SQLAlchemy(app)
 
 
 # App contents
+from server.models import *
+from server.api import *
+from server.servefront import *
 
 
 
