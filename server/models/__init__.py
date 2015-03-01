@@ -1,1 +1,1 @@
-__all__ = ['users', 'foodentry']
+__all__ = ['users', 'food', 'logistics']

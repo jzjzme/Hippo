@@ -27,6 +27,5 @@ from server.api import *
 from server.servefront import *
 
 
-
 # Create db
 db.create_all()
