@@ -1,5 +1,17 @@
 angular.module('starter.controllers', [])
 
+.controller('quantityCtrl', function($scope) {
+  $scope.quantity = 0;
+  $scope.increment = function(num) {
+    if ($scope.quantity == 0 && num == -1) {
+      return;
+    }
+    else {
+      $scope.quantity += num;
+    }
+  }
+})
+
 .controller('DashCtrl', function($scope) {})
 
 .controller('ChatsCtrl', function($scope, Chats) {

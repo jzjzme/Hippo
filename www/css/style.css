@@ -41,6 +41,6 @@
 	float: left;
 }
 
-button {
-	display: inline-block;
+.cardQuantity {
+	font-size: 30px;
 }

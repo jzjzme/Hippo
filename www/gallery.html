@@ -36,15 +36,15 @@
 					<h1>I'm a Fat Hippo</h1>
 					<p>Me too</p>
 					<p class="dietaryLifeStyle">Vegan</p>
-					<p class="dietaryLifeStyle">Meat-Lover</p>
+					<p class="dietaryLifeStyle">Paleo</p>
 				</div>
 				<div class="cardBuyInfo">
 					<p class="cardPrice">$9.95</p>
-					<span class="cardIncrement">
-						<button class="button icon ion-ios-plus-outline" onclick="decrement()"></button>
-						<div>9</div>
-						<button class="button icon ion-ios-plus-outline" onclick="increment()"></button>
-					</span>
+					<div class="cardIncrement" ng-controller="quantityCtrl">
+						<button class="button icon ion-minus-circled" ng-click="increment(-1)"></button>
+						<span class="cardQuantity">{{quantity}}</span>
+						<button class="button icon ion-plus-circled" ng-click="increment(1)"></button>
+					</div>
 				</div>
 			</div>
 			<!-- card 2 -->
