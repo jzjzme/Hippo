@@ -55,3 +55,7 @@
 #checkoutBar {
 	position: fixed;
 }
+
+.tableElt {
+	padding: 10px;
+}
