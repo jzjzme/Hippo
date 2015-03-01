@@ -1,1 +1,36 @@
 /* Empty. Add your own CSS if you like */
+<<<<<<< HEAD
+.cardMainImage {
+	display: block;
+}
+
+.cardTitle {
+	display: block;
+}
+
+.cardTitleIcon {
+	height: 100px;
+	width:  100px;
+	display: inline;
+	float: 	left;
+	margin:	10px;
+	border: 2px;
+	border-color: gray;
+	border-style: solid;
+}
+
+.dietaryLifeStyle {
+	display: inline;
+	margin-right: 10px;
+	color: gray;
+}
+
+.cardBuyInfo {
+	clear: both;
+}
+
+.cardPrice {
+	margin-left: 20px;
+}
+=======
+>>>>>>> 0444e9c558f702fa77d87865e5148fc6909c3dfe
