@@ -1,4 +1,8 @@
 /* Empty. Add your own CSS if you like */
+.card {
+	display: block;
+}
+
 .cardMainImage {
 	display: block;
 }
@@ -7,6 +11,9 @@
 	display: block;
 }
 
+.body{
+	background-image: url('/loginback.jpg');
+}
 .cardTitleIcon {
 	height: 100px;
 	width:  100px;
@@ -43,4 +50,6 @@
 
 .cardQuantity {
 	font-size: 30px;
+
+
 }
