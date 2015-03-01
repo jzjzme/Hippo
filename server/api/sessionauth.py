@@ -20,6 +20,7 @@ def current_user_props():
     return {'username': current_user.username, 
         'id': current_user.id,
         'email': current_user.email,
+        'food_tags': [foodtag.name for foodtag in current_user.food_tags.all()],
     } if current_user.is_authenticated() else {}
 
 def hash_password(pw):

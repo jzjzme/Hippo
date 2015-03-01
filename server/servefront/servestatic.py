@@ -1,4 +1,4 @@
-from flask import send_from_directory
+from flask import send_from_directory, render_template
 
 import os
 
@@ -36,7 +36,7 @@ def serve_static_path(directory, path):
     return send_from_directory(STATIC_PATH, os.path.join(directory, path).replace('\\','/'))
 
 
-
+@app.route('/', defaults={'path': 'homepage'})
 @app.route('/<path:path>')
 def serve_wwwroot(path):
-    return send_from_directory(STATIC_PATH, path)
+    return render_template(path + '.html')

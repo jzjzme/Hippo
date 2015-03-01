@@ -1,0 +1,85 @@
+div.card {
+    padding: 0em; 
+
+    box-shadow: 5px 5px 5px #333333;   
+}
+
+div.cardbg {
+    padding: 0.5em;
+
+    min-height: 16em;
+
+    background-position: center; 
+    background-size: 100%;
+}
+
+div.cardbg.inactive {
+    opacity: 0.2;
+}
+
+div.cardheaderbg {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+div.cardheader {
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    border-bottom: 4px dotted white;
+}
+
+h4.white, h6.white {
+    color: white;
+}
+
+div.footer {
+    position: relative;
+
+    padding: 0.5em;
+}
+
+li {
+    padding: 0.5em;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+    color: #CCCCCC;
+}
+
+span.order-counter {
+    position: absolute;
+    right: 0.5em;
+    bottom: 0.5em;
+
+    font-size: 1.5em;
+}
+
+div#orderscreen {
+    background-color: rgba(255, 255, 255, 0.95);
+
+    position: fixed;
+    top: 100vh;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    padding: 2em;
+}
+
+div#orderscreen.show {
+    top: 0;
+}
+
+div#orderscreenshow {
+    background: white;
+    opacity: 0.8;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    padding: 0.5em;
+}

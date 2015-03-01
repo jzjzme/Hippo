@@ -3,7 +3,8 @@ from flask.views import MethodView
 from flask.ext.login import current_user, login_user
 
 from server.models.users import User
-from server.api.sessionauth import current_user_props, hash_password, check_password
+from server.models.food import FoodTag
+from server.api.sessionauth import session_auth_required, current_user_props, hash_password, check_password
 
 from server import app, db, login_manager
 
@@ -22,6 +23,18 @@ def create_new_user(username, password, email):
 
     return new_user
 
+def attach_tags(user, foodtags):
+    for foodtag, checked in foodtags.iteritems():
+
+        if checked:
+            tag = FoodTag.query.filter_by(name=foodtag).first()
+
+            if tag:
+                user.food_tags.append(tag)
+
+    db.session.add(user)
+    db.session.commit()
+
 
 
 class RegisterAPI(MethodView):
@@ -30,12 +43,17 @@ class RegisterAPI(MethodView):
         if request_data is None:
             request_data = {}
 
+        foodtags = request_data['foodtags']
+
         errors, cleaned_data = self.validate_data(request_data)
 
         if errors:
             return jsonify(**{'success': False, 'errors': errors}), 422
 
         user = create_new_user(**cleaned_data)
+
+        attach_tags(user, foodtags)
+
         db.session.commit()
 
         login_user(user)
@@ -97,3 +115,15 @@ class RegisterAPI(MethodView):
 
 register_view = RegisterAPI.as_view('register_api')
 app.add_url_rule('/api/users/register', view_func=register_view, methods=['POST'])
+
+
+
+class UserAPI(MethodView):
+    @session_auth_required
+    def get(self):
+        return jsonify(**{'user': current_user_props()})
+
+
+
+user_view = UserAPI.as_view('user_api')
+app.add_url_rule('/api/user', view_func=user_view, methods=['GET'])

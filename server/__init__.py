@@ -1,3 +1,4 @@
+import jinja2
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.login import LoginManager
@@ -11,6 +12,11 @@ app = Flask(__name__)
 
 # Load config
 app.config.from_object('server.serversettings')
+
+
+
+# Templating
+app.jinja_loader = jinja2.FileSystemLoader(app.config['STATIC_PATH'])
 
 
 

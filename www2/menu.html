@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}Menu{% endblock %}
+
+{% block ng_attr %}ng-app="menu"{% endblock %}
+
+{% block head_css %}
+  {{ super() }}
+  <link href='css/menu/menu.css' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block header %}
+  <div id="headerrow" class="row">
+    <div class="column medium-8">
+      <h4>hippo</h4>
+    </div>
+    <div class="column medium-4">
+      <h6>
+        Made with <i class="fa fa-spoon"></i> in SF
+      </h6>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <menu-list></menu-list>
+  <order-cart></order-cart>
+{% endblock %}
+
+{% block body_js %}
+  {{ super() }}
+  <script src='js/menu/menu.js'></script>
+  <script src='js/menu/menulist.js'></script>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block ng_attr %}ng-app="homepage"{% endblock %}
+
+{% block head_css %}
+  {{ super() }}
+  <link href='css/homepage/homepage.css' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block header %}
+  <div id="headerrow" class="row">
+    <div class="column medium-8">
+      <h4>hippo</h4>
+    </div>
+    <div class="column medium-4">
+      <h6>
+        Made with <i class="fa fa-spoon"></i> in SF
+      </h6>
+      <login-form></login-form>
+    </div>
+  </div>
+{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <h2>
+      Who are you?
+    </h2>
+  </div>
+  <div class="row">
+    <register-form></register-form>
+  </div>
+{% endblock %}
+
+{% block body_js %}
+  {{ super() }}
+  <script src='js/homepage/homepage.js'></script>
+  <script src='js/homepage/register.js'></script>
+  <script src='js/homepage/login.js'></script>
+{% endblock %}

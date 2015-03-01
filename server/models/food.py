@@ -30,10 +30,17 @@ class FoodEntry(db.Model):
 
 
 
+foodtagusertable = db.Table('foodtagusertable',
+    db.Column('food_tag_id', db.Integer, db.ForeignKey('food_tag.id')),
+    db.Column('user_id', db.Integer, db.ForeignKey('user.id'))
+)
+
 class FoodTag(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
     name = db.Column(db.String(255))
+
+    tags = db.relationship('User', secondary=foodtagusertable, backref=db.backref('food_tags', lazy='dynamic'))
 
 
 

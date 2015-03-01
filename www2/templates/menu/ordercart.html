@@ -1,0 +1,32 @@
+<div id="orderscreen" ng-class="{show: ordercartCtrl.visible}">
+    <div ng-click="ordercartCtrl.show()" id="orderscreenshow" class="clickable">
+        <i class="fa fa-2x fa-shopping-cart"></i>
+        Checkout
+    </div>
+
+    <div class="row">
+        <div class="columns medium-6">
+            <i ng-click="ordercartCtrl.hide()" class="clickable fa fa-2x fa-arrow-circle-left"></i>
+            <h4>Order cart</h4>
+
+            <div ng-show="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
+                <span>Your cart is empty</span>
+            </div>
+
+            <div ng-repeat="item in ordercartCtrl.order | filter : ordercartCtrl.quantityFilter">
+                {{ item.orderCounter }}x <strong>{{ item.name }}<strong>
+            </div>
+
+            <div ng-hide="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
+                <span>Total {{ ordercartCtrl.total | currency:"$" }}</span>
+            </div>
+        </div>
+
+        <div class="columns medium-6">
+            
+            
+            
+            <button>Confirm</button>
+        </div>
+    </div>
+</div>
