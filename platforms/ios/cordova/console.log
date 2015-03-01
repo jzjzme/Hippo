@@ -19,3 +19,15 @@
 2015-02-28 16:07:55.952 hippo[4557:596144] Resetting plugins due to page load.
 2015-02-28 16:07:56.230 hippo[4557:596144] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/0D041E1B-6BDC-462E-8B72-2111EFDFA226/hippo.app/www/index.html#/tab/dash
 >>>>>>> 0444e9c558f702fa77d87865e5148fc6909c3dfe
+2015-02-28 20:02:13.908 hippo[7326:860726] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/shaibruhis/Library/Developer/CoreSimulator/Devices/47F9EE2F-69A9-4FDE-9E7D-41B1FFD04CB1/data/Containers/Data/Application/96D0556F-51A2-4EF3-95B6-419E5E20F71D/Library/Cookies/Cookies.binarycookies
+2015-02-28 20:02:14.717 hippo[7326:860726] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 20:02:14.718 hippo[7326:860726] Multi-tasking -> Device: YES, App: YES
+2015-02-28 20:02:14.752 hippo[7326:860726] Unlimited access to network resources
+2015-02-28 20:02:17.980 hippo[7326:860726] Resetting plugins due to page load.
+2015-02-28 20:02:19.038 hippo[7326:860726] Finished load of: file:///Users/shaibruhis/Library/Developer/CoreSimulator/Devices/47F9EE2F-69A9-4FDE-9E7D-41B1FFD04CB1/data/Containers/Bundle/Application/BD92B105-FAF1-4C61-A9C1-8A7A7891A039/hippo.app/www/index.html#/tab/dash
+2015-02-28 20:07:44.846 hippo[7458:862859] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/shaibruhis/Library/Developer/CoreSimulator/Devices/47F9EE2F-69A9-4FDE-9E7D-41B1FFD04CB1/data/Containers/Data/Application/DDDC41F7-BA2D-4E73-91AA-B2342F65EF94/Library/Cookies/Cookies.binarycookies
+2015-02-28 20:07:45.117 hippo[7458:862859] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 20:07:45.117 hippo[7458:862859] Multi-tasking -> Device: YES, App: YES
+2015-02-28 20:07:45.118 hippo[7458:862859] Unlimited access to network resources
+2015-02-28 20:07:46.346 hippo[7458:862859] Resetting plugins due to page load.
+2015-02-28 20:07:47.265 hippo[7458:862859] Finished load of: file:///Users/shaibruhis/Library/Developer/CoreSimulator/Devices/47F9EE2F-69A9-4FDE-9E7D-41B1FFD04CB1/data/Containers/Bundle/Application/0D3D060A-8EE5-4AC7-BB91-049A6A083FB6/hippo.app/www/index.html#/tab/dash
