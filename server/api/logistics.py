@@ -61,7 +61,7 @@ class CreditCardAPI(MethodView):
             'security_code': current_user.creditcard.security_code,
         } if current_user.creditcard else None
 
-        response_json = {'address': obj}
+        response_json = {'creditcard': obj}
 
         return jsonify(**response_json)
 
@@ -87,4 +87,4 @@ class CreditCardAPI(MethodView):
         return jsonify(**{'success': True})
 
 creditcard_view = CreditCardAPI.as_view('creditcard_api')
-app.add_url_rule('/api/user/creditcard', view_func=creditcard_view, methods=['GET'])
+app.add_url_rule('/api/user/creditcard', view_func=creditcard_view, methods=['GET', 'POST'])

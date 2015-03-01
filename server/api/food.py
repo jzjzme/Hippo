@@ -21,6 +21,9 @@ class MenuAPI(MethodView):
                 'active': item.active,
                 'price': item.price,
                 'restaurant': item.restaurant.name,
+                'details': item.details,
+                'ingredients': item.ingredients,
+                'nutrition': item.nutrition,
                 'imageurl_icon': item.imageurl_icon,
                 'imageurl_full': item.imageurl_full,
             }

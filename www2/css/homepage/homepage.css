@@ -1,0 +1,6 @@
+div#headerrow {
+    background-color: #F27242;
+    margin-bottom: 2em;
+
+    border-bottom: 2px dotted white;
+}

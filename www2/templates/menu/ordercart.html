@@ -6,27 +6,85 @@
 
     <div class="row">
         <div class="columns medium-6">
-            <i ng-click="ordercartCtrl.hide()" class="clickable fa fa-2x fa-arrow-circle-left"></i>
-            <h4>Order cart</h4>
+            <div>
+                <i ng-click="ordercartCtrl.hide()" class="clickable fa fa-2x fa-arrow-circle-left"></i>
+                <h4>Order cart</h4>
 
-            <div ng-show="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
-                <span>Your cart is empty</span>
-            </div>
+                <div ng-show="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
+                    <span>Your cart is empty</span>
+                </div>
 
-            <div ng-repeat="item in ordercartCtrl.order | filter : ordercartCtrl.quantityFilter">
-                {{ item.orderCounter }}x <strong>{{ item.name }}<strong>
-            </div>
+                <div ng-repeat="item in ordercartCtrl.order | filter : ordercartCtrl.quantityFilter">
+                    {{ item.orderCounter }}x <strong>{{ item.name }}</strong>
+                </div>
 
-            <div ng-hide="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
-                <span>Total {{ ordercartCtrl.total | currency:"$" }}</span>
+                <div ng-hide="(ordercartCtrl.order | filter : ordercartCtrl.quantityFilter).length == 0">
+                    <span>Total <strong>{{ ordercartCtrl.total | currency:"$" }}</strong></span>
+                </div>
+            </div>  
+
+            <br/>
+
+            <div ng-init="ordercartCtrl.getInitialLogistics()">
+                <span>Deliver to:</span>
+                <form name="addressForm" novalidate>
+
+                    <input ng-model="ordercartCtrl.address.line_1" name="line_1" type="text" placeholder="Address Line 1"></input>
+                    <input ng-model="ordercartCtrl.address.line_2" name="line_2" type="text" placeholder="Address Line 2"></input>
+                    <div class="row">
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.address.city" name="city" type="text" placeholder="City"></input>
+                        </div>
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.address.state" name="state" type="text" placeholder="State"></input>
+                        </div>
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.address.zipcode" name="zipcode" type="text" placeholder="Zip Code"></input>
+                        </div>
+                    </div>
+
+                    <button ng-click="ordercartCtrl.updateAddress()" class="tiny button">remember this address</button>
+
+                </form>
+                
+                <br/>
+
+                <span>Pay with:</span>
+                <form name="creditcardForm" novalidate>
+
+                    <input ng-model="ordercartCtrl.creditcard.credit_card_number" name="line_1" type="text" placeholder="Number"></input>
+                    <div class="row">
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.creditcard.expiration_month" name="line_2" type="text" placeholder="00 (Month)"></input>
+                        </div>
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.creditcard.expiration_year" name="city" type="text" placeholder="00 (Year)"></input>
+                        </div>
+                        <div class="columns small-4">
+                            <input ng-model="ordercartCtrl.creditcard.security_code" name="state" type="text" placeholder="CCV"></input>
+                        </div>
+                    </div>
+
+                    <button ng-click="ordercartCtrl.updateCreditcard()" class="tiny button">remember this card</button>
+
+                </form>
             </div>
         </div>
 
         <div class="columns medium-6">
-            
-            
-            
-            <button>Confirm</button>
+            <br/>
+            <br/>
+            <div ng-hide="(ordercartCtrl.order | filter : ordercartCtrl.violationsFilter | filter : ordercartCtrl.quantityFilter).length == 0">
+                Hey there, we noticed that some items may not fit your preferences:
+                <div ng-repeat="item in ordercartCtrl.order | filter : ordercartCtrl.violationsFilter | filter : ordercartCtrl.quantityFilter">
+                    <i class="fa fa-fw fa-arrow-right"></i><strong>{{ item.name }}</strong><br/>
+                    <span ng-repeat="violation in item.violations">... is not {{ violation }}<br/></span>
+                </div>
+                </br>
+                <input type="checkbox" ng-model="violationwarning"> I'm cool with this.
+            </div>
+
+            <button ng-click="ordercartCtrl.submitOrder()">Confirm Payment</button>
         </div>
     </div>
 </div>

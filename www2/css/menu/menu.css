@@ -1,7 +1,7 @@
 div.card {
     padding: 0em; 
 
-    box-shadow: 5px 5px 5px #333333;   
+    box-shadow: 5px 5px 5px #333333; 
 }
 
 div.cardbg {
@@ -14,7 +14,7 @@ div.cardbg {
 }
 
 div.cardbg.inactive {
-    opacity: 0.2;
+    opacity: 0.4;
 }
 
 div.cardheaderbg {
@@ -23,11 +23,15 @@ div.cardheaderbg {
 
 div.cardheader {
     padding: 0.5em 0.5em 0.5em 0.5em;
-    border-bottom: 4px dotted white;
+    border-bottom: 2px dashed white;
 }
 
-h4.white, h6.white {
+h4.white, h6.white, p.white {
     color: white;
+}
+
+p.smaller, span.smaller {
+    font-size: 0.7em;
 }
 
 div.footer {
@@ -45,13 +49,13 @@ li {
 }
 
 .clickable:hover {
-    color: #CCCCCC;
+    color: #F27242;
 }
 
 span.order-counter {
     position: absolute;
     right: 0.5em;
-    bottom: 0.5em;
+    top: 0em;
 
     font-size: 1.5em;
 }
@@ -67,6 +71,12 @@ div#orderscreen {
     height: 100vh;
 
     padding: 2em;
+
+    overflow: auto;
+}
+
+div#orderscreen input[type=text] {
+    margin-bottom: 2px;
 }
 
 div#orderscreen.show {

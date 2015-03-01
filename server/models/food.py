@@ -12,6 +12,7 @@ class FoodEntry(db.Model):
 
     name = db.Column(db.String(255))
     details = db.Column(db.Text)
+    nutrition = db.Column(db.Text)
     ingredients = db.Column(db.Text)
 
     active = db.Column(db.Boolean, default=False)

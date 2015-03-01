@@ -1,23 +1,23 @@
 <div class="row">
     <div class="columns medium-8">
         <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2">
-            <li class="panel" ng-repeat="(foodtag, checked) in registerCtrl.foodtags">
+            <li ng-repeat="(foodtag, checked) in registerCtrl.foodtags">
                 <div>
-                    <input type="checkbox" name="foodtag" value="{{ $index }}" ng-model="registerCtrl.foodtags[foodtag]"> {{ foodtag }}
-                </div>  
+                    <input type="checkbox" name="foodtag" value="{{ $index }}" ng-model="registerCtrl.foodtags[foodtag]">
+                    <img height="40" width="160" align="center" src="img/{{ foodtag }}.jpg" style="border: 2px solid black;">
+                </div> 
             </li>
         </ul>
     </div>
     <div class="columns medium-4">
-      <form name="registerForm" novalidate>
+        <form name="registerForm" novalidate>
+            <input class="error" ng-model="registerCtrl.username" name="username" ng-model-options="{ debounce: 500 }" type="text" placeholder="username"></input>
 
-        <input class="error" ng-model="registerCtrl.username" name="username" ng-model-options="{ debounce: 500 }" type="text" placeholder="username"></input>
+            <input class="error" ng-model="registerCtrl.email" ng-model-options="{ debounce: 500 }" name="email" type="email" placeholder="email"></input>
 
-        <input class="error" ng-model="registerCtrl.email" ng-model-options="{ debounce: 500 }" name="email" type="email" placeholder="email"></input>
+            <input class="error" ng-model="registerCtrl.password" ng-model-options="{ debounce: 500 }" name="password" type="password" placeholder="password"></input>
 
-        <input class="error" ng-model="registerCtrl.password" ng-model-options="{ debounce: 500 }" name="password" type="password" placeholder="password"></input>
-
-        <button ng-click="registerCtrl.submit()" class="tiny button expand">start eating</button>
-      </form>
+            <button ng-click="registerCtrl.submit()" class="tiny button expand">start eating</button>
+        </form>
     </div>
 </div>

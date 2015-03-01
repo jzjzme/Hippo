@@ -1,17 +1,26 @@
 <div ng-init="menulistCtrl.init()" class="row">
-        <ul class="small-block-grid-1 medium-block-grid-2">
-            <li ng-repeat="item in menulistCtrl.menuItems">
+        <ul class="small-block-grid-1 medium-block-grid-2" data-equalizer>
+            <li ng-repeat="item in menulistCtrl.menuItems" data-equalizer-watch>
                 <div class="card panel">
                     <div class="cardbg" ng-class="{inactive: item.inactive || false}" style="background: url({{ item.imageurl_full }}) no-repeat center;">
                         <div class="cardheaderbg">
                             <div class="cardheader">
                                 <h4 class="white">{{ item.name }}<h4>
                                 <h6 class="white">{{ item.restaurant }}</h6>
+                                <p class="white">{{ item.details }}</p>
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="footer">
+                    <div ng-init="show_more = false" ng-mouseover="show_more = true" ng-mouseleave="show_more = false" class="footer">
                         <h4>{{ item.price | currency:"$" }}</h4>
+                        <div ng-hide="show_more">
+                            <span class="smaller">roll over to see more info</span>
+                        </div>
+                        <div ng-show="show_more">
+                            <p class="smaller">{{ item.nutrition }}</p>
+                            <p class="smaller">{{ item.ingredients }}</p>
+                        </div>
                         <item-order-counter></item-order-counter>
                     </div>
                 </div>  

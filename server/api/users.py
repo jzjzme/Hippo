@@ -43,8 +43,8 @@ class RegisterAPI(MethodView):
         if request_data is None:
             request_data = {}
 
-        foodtags = request_data['foodtags']
-
+        foodtags = request_data['foodtags'] if 'foodtags' in request_data else []
+        
         errors, cleaned_data = self.validate_data(request_data)
 
         if errors:

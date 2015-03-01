@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}Thank you!{% endblock %}
+
+{% block ng_attr %}ng-app="homepage"{% endblock %}
+
+{% block head_css %}
+  {{ super() }}
+  <link href='css/confirmation/confirmation.css' rel='stylesheet' type='text/css'>
+{% endblock %}
+
+{% block header %}
+{% endblock %}
+
+{% block content %}
+<div class="row" id="thankyou">
+  <h4>
+    Bon appetit!
+  </h4>
+  <p>
+    Thank you for placing your order. Your meal will be delivered shortly!
+  </p>
+  <a href="/menu">Click here to return.</a>
+</div>
+
+{% endblock %}
+
+{% block body_js %}
+  {{ super() }}
+{% endblock %}

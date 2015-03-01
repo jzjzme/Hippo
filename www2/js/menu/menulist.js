@@ -77,16 +77,22 @@
                     };
                 }).
                 error(function(data){
-                    alert('Could not fetch menu!');
+                    alert('Could not fetch user preferences!');
                 });
         };
 
         this.checkMissingTags = function(usertags, item){
+            item.inactive = false;
+            item.violations = []
+
             for (var i = usertags.length - 1; i >= 0; i--) {
-                if (item.tags.indexOf(usertags[i]) == -1) return item.inactive = true;
+                if (item.tags.indexOf(usertags[i]) == -1) {
+                    item.inactive = true;
+                    item.violations.push(usertags[i]);
+                } 
             };
 
-            return item.inactive = false;
+            return item.inactive;
         }
 
         this.init = function(){
@@ -94,7 +100,7 @@
         };
     }]);
 
-    app.controller('ordercartController', ['ordercartService', function(ordercartService){
+    app.controller('ordercartController', ['ordercartService', 'logisticsService', function(ordercartService, logisticsService){
         var ctrl = this;
 
         this.order = [];
@@ -103,9 +109,17 @@
 
         this.visible = false;
 
+        this.address = {};
+
+        this.creditcard = {};
+
         this.quantityFilter = function(item) {
             return item.orderCounter > 0;
         };
+
+        this.violationsFilter = function(item) {
+            return item.violations.length > 0;
+        }
 
         this.show = function() {
             ctrl.visible = true;
@@ -119,6 +133,77 @@
             ctrl.visible = false;
         };
 
+        this.getInitialLogistics = function() {
+            console.log('getInitialLogistics called');
+
+            logisticsService.getUserAddress().success(function(data){
+                ctrl.address = data.address;
+            });
+
+            logisticsService.getUserCreditCard().success(function(data){
+                ctrl.creditcard = data.creditcard;
+            });
+        };
+
+        this.updateAddress = function() {
+            console.log(logisticsService)
+
+            logisticsService.updateUserAddress(ctrl.address).
+                success(function(data){
+                    alert('Saved address');
+                }).
+                error(function(data){
+                    alert('Could not save address');
+                });
+        };
+
+        this.updateCreditcard = function() {
+            logisticsService.updateUserCreditCard(ctrl.creditcard).
+                success(function(data){
+                    alert('Saved credit card');
+                }).
+                error(function(data){
+                    alert('Could not save credit card');
+                });
+        };
+
+        this.submitOrder = function() {
+            window.location = '/confirmation'
+        };
+
+    }]);
+
+    app.factory('logisticsService', ['$http', function($http){
+        this.getUserAddress = function(){
+            return $http({url: 'api/user/address', method: 'GET'});
+        };
+
+        this.getUserCreditCard = function(){
+            return $http({url: 'api/user/creditcard', method: 'GET'});
+        };
+
+        this.updateUserAddress = function(data){
+            postData = data;
+
+            headers = {'Content-Type': 'application/json'};
+
+            return $http({url: 'api/user/address', method: 'POST', data: postData, headers: headers});
+        };
+
+        this.updateUserCreditCard = function(data){
+            postData = data;
+
+            headers = {'Content-Type': 'application/json'};
+
+            return $http({url: 'api/user/creditcard', method: 'POST', data: postData, headers: headers});
+        };
+
+        return {
+            getUserAddress: this.getUserAddress,
+            getUserCreditCard: this.getUserCreditCard,
+            updateUserAddress: this.updateUserAddress,
+            updateUserCreditCard: this.updateUserCreditCard,
+        };
     }]);
 
     app.factory('menulistService', ['$http', function($http){
