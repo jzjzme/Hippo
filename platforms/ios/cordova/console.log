@@ -19,3 +19,40 @@
 2015-02-28 16:07:55.952 hippo[4557:596144] Resetting plugins due to page load.
 2015-02-28 16:07:56.230 hippo[4557:596144] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/0D041E1B-6BDC-462E-8B72-2111EFDFA226/hippo.app/www/index.html#/tab/dash
 >>>>>>> 0444e9c558f702fa77d87865e5148fc6909c3dfe
+2015-02-28 17:09:55.483 hippo[6500:638887] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/76AD8568-CDEA-4CEB-B4E1-D24483AAB82E/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:09:55.585 hippo[6500:638887] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:09:55.586 hippo[6500:638887] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:09:55.588 hippo[6500:638887] Unlimited access to network resources
+2015-02-28 17:09:56.009 hippo[6500:638887] Resetting plugins due to page load.
+2015-02-28 17:09:56.200 hippo[6500:638887] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/985C1AA1-7AA4-4957-BFC5-4C5BD03066BC/hippo.app/www/index.html
+2015-02-28 17:44:06.050 hippo[6693:657122] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/293CB1A6-67AC-4391-952C-3675D7694901/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:44:06.143 hippo[6693:657122] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:44:06.144 hippo[6693:657122] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:44:06.146 hippo[6693:657122] Unlimited access to network resources
+2015-02-28 17:44:06.486 hippo[6693:657122] Resetting plugins due to page load.
+2015-02-28 17:44:06.627 hippo[6693:657122] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/E0857FC8-DFEA-4DA4-91C8-5E4958797C5C/hippo.app/www/index.html
+2015-02-28 17:52:29.539 hippo[6947:662915] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/FABECDC1-C3D6-45B5-87F1-84CE0F62BC76/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:52:29.627 hippo[6947:662915] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:52:29.627 hippo[6947:662915] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:52:29.628 hippo[6947:662915] Unlimited access to network resources
+2015-02-28 17:52:29.973 hippo[6947:662915] Resetting plugins due to page load.
+2015-02-28 17:52:30.180 hippo[6947:662915] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/83AFD758-A0D4-4AAB-A0A3-FB2F6C301C96/hippo.app/www/index.html
+2015-02-28 17:52:39.203 hippo[7068:663399] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/00FE6120-6B7D-4DCA-A422-4D4DB98090DE/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:52:39.283 hippo[7068:663399] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:52:39.283 hippo[7068:663399] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:52:39.284 hippo[7068:663399] Unlimited access to network resources
+2015-02-28 17:52:39.518 hippo[7068:663399] Resetting plugins due to page load.
+2015-02-28 17:52:39.685 hippo[7068:663399] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/1CE499B6-73FD-4B16-B505-12C95D0321B5/hippo.app/www/index.html
+2015-02-28 17:53:16.689 hippo[7189:664096] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/15F5999C-3E06-4071-8CA0-DCAF7FF6D7D9/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:53:16.779 hippo[7189:664096] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:53:16.780 hippo[7189:664096] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:53:16.781 hippo[7189:664096] Unlimited access to network resources
+2015-02-28 17:53:17.020 hippo[7189:664096] Resetting plugins due to page load.
+2015-02-28 17:53:17.173 hippo[7189:664096] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/54AF36F1-96E9-4EEB-BFBE-571D0DA649B6/hippo.app/www/index.html
+2015-02-28 17:58:50.142 hippo[7189:667224] Terminating since there is no system app.
+2015-02-28 17:59:14.987 hippo[7466:668348] DiskCookieStorage changing policy from 2 to 0, cookie file: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Data/Application/CB746959-D146-4CE6-8A0A-2513BFC4B01F/Library/Cookies/Cookies.binarycookies
+2015-02-28 17:59:15.070 hippo[7466:668348] Apache Cordova native platform version 3.7.0 is starting.
+2015-02-28 17:59:15.070 hippo[7466:668348] Multi-tasking -> Device: YES, App: YES
+2015-02-28 17:59:15.071 hippo[7466:668348] Unlimited access to network resources
+2015-02-28 17:59:15.355 hippo[7466:668348] Resetting plugins due to page load.
+2015-02-28 17:59:15.486 hippo[7466:668348] Finished load of: file:///Users/JackieZ/Library/Developer/CoreSimulator/Devices/6480C9C1-F368-4B36-85B0-4D9808DDB253/data/Containers/Bundle/Application/809E5C35-B490-4223-ABFE-4DF74A8C0B7B/hippo.app/www/index.html
