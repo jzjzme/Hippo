@@ -10,7 +10,6 @@ from server import app, db, login_manager
 
 
 class MenuAPI(MethodView):
-    @session_auth_required
     def get(self):
         menu_items = FoodEntry.query.filter_by(active=True).all()
 

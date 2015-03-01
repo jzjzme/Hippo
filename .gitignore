@@ -57,5 +57,4 @@ target/
 # sqlite
 *.db
 
-# Dummy data script
-load_dummy_data.py
+
