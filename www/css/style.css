@@ -50,6 +50,8 @@
 
 .cardQuantity {
 	font-size: 30px;
+}
 
-
+#checkoutBar {
+	position: fixed;
 }

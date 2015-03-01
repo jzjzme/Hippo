@@ -55,9 +55,6 @@ class SessionAuthAPI(MethodView):
         return jsonify(**{'authenticated': True, 'user': current_user_props()})
 
     def delete(self):
-        presence = Presence.query.filter(Presence.user_id==current_user.id).first()
-        if presence is None:
-            return jsonify(**{'success': False}), 401
         logout_user()
         return jsonify(**{'success': True, 'authenticated': current_user.is_authenticated()})
 
