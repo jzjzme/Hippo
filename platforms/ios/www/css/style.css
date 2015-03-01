@@ -1,4 +1,5 @@
 /* Empty. Add your own CSS if you like */
+<<<<<<< HEAD
 .cardMainImage {
 	display: block;
 }
@@ -30,17 +31,6 @@
 
 .cardPrice {
 	margin-left: 20px;
-	/*margin-right: 20px;*/
-	margin-top: 15px;
-	display: inline;
-	float: left
 }
-
-.cardIncrement {
-	display: inline;
-	float: left;
-}
-
-button {
-	display: inline-block;
-}
+=======
+>>>>>>> 0444e9c558f702fa77d87865e5148fc6909c3dfe
